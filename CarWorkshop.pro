@@ -9,5 +9,6 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    client.h
+    client.h \
+    part.h
 
