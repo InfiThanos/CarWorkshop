@@ -10,5 +10,6 @@ qtcAddDeployment()
 
 HEADERS += \
     client.h \
-    part.h
+    part.h \
+    workorder.h
 
