@@ -15,8 +15,9 @@ private:
 public:
     Part(string partName, unsigned __int32 article,                                 //конструктор
          unsigned __int32 availability, unsigned __int32 price);
-    string getInfoPart(string& p_partName, unsigned __int32& article,               //метод для возврата
-                       unsigned __int32& availability, unsigned __int32& price);    //значения полей
+
+    void getInfoPart(string& p_partName, unsigned __int32& p_article,               //метод для возврата
+                       unsigned __int32& p_availability, unsigned __int32& p_price);//значения полей
 };
 
 #endif // PART
