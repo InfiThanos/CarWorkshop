@@ -13,8 +13,8 @@ private:
                      availability,      //наличие на складе автомастерской
                      price;             //стоимость детали для покупки у автомастерской
 public:
-    Part(string partName, unsigned __int32 article,                                 //конструктор
-         unsigned __int32 availability, unsigned __int32 price);
+    Part(string p_partName, unsigned __int32 p_article,                                 //конструктор
+         unsigned __int32 p_availability, unsigned __int32 p_price);
 
     void getInfoPart(string& p_partName, unsigned __int32& p_article,               //метод для возврата
                        unsigned __int32& p_availability, unsigned __int32& p_price);//значения полей
