@@ -14,5 +14,11 @@ HEADERS += \
     workorder.h \
     clientlist.h \
     partlist.h \
-    workorderlist.h
+    workorderlist.h \
+    expense.h \
+    expenserecord.h \
+    partinputscreen.h \
+    expenseinputscreen.h \
+    clientinputscreen.h \
+    workorderinputscreen.h
 
