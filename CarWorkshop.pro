@@ -20,5 +20,8 @@ HEADERS += \
     partinputscreen.h \
     expenseinputscreen.h \
     clientinputscreen.h \
-    workorderinputscreen.h
+    workorderinputscreen.h \
+    income.h \
+    incomeinputscreen.h \
+    incomerecord.h
 
