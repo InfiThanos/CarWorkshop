@@ -24,5 +24,6 @@ HEADERS += \
     income.h \
     incomeinputscreen.h \
     incomerecord.h \
-    annualreport.h
+    annualreport.h \
+    loginscreen.h
 
