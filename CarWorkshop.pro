@@ -23,5 +23,6 @@ HEADERS += \
     workorderinputscreen.h \
     income.h \
     incomeinputscreen.h \
-    incomerecord.h
+    incomerecord.h \
+    annualreport.h
 
