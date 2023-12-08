@@ -3,7 +3,10 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    clientlist.cpp \
+    partlist.cpp \
+    workorderlist.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
