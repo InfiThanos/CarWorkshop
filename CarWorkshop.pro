@@ -5,7 +5,8 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     client.cpp \
-    part.cpp
+    part.cpp \
+    workorder.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
