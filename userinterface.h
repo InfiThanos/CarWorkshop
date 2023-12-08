@@ -1,5 +1,5 @@
-#ifndef USERINTERFASE
-#define USERINTERFASE
+#ifndef USERINTERFACE
+#define USERINTERFACE
 
 #include "clientlist.h"
 #include "clientinputscreen.h"
@@ -35,5 +35,5 @@ public:
     void interact();
 };
 
-#endif // USERINTERFASE
+#endif // USERINTERFACE
 

@@ -3,7 +3,9 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    client.cpp \
+    part.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -26,5 +28,5 @@ HEADERS += \
     incomerecord.h \
     annualreport.h \
     loginscreen.h \
-    userinterfase.h
+    userinterface.h
 
