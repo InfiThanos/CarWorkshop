@@ -12,6 +12,7 @@
 #include "incomerecord.h"
 #include "incomeinputscreen.h"
 #include "annualreport.h"
+#include "loginscreen.h"
 
 class UserInterface                                     //этот класс определяет взаимодействие юзера с программой
 {
@@ -27,6 +28,7 @@ private:
     ExpenseRecord* ptrExpenseRecord;
     ExpenseInputScreen* ptrExpenseInputScreen;
     AnnualReport* ptrAnnualReport;
+    LoginScreen* ptrLoginScreen;
 public:
     UserInterface();
     ~UserInterface();

@@ -5,10 +5,8 @@
 
 class LoginScreen           //класс для авторизации
 {
-private:
-    string login;           //логин = пароль пока что
 public:
-    string getLogin();      //запрос поля
+    char dispLogSc();           //запрос пароля
 };
 
 #endif // LOGINSCREEN
