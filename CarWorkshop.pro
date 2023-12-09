@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     client.cpp \
     part.cpp \
     workorder.cpp \
-    income.cpp
+    income.cpp \
+    incomerecord.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
