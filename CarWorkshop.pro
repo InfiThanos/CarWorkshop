@@ -4,15 +4,15 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-<<<<<<< HEAD
+    clientipnuptscreen.cpp \
+    partinputscreen.cpp \
+    workorderinputscreen.cpp\
     clientlist.cpp \
     partlist.cpp \
-    workorderlist.cpp
-=======
+    workorderlist.cpp\
     client.cpp \
     part.cpp \
     workorder.cpp
->>>>>>> 2f3e61d2868bc3197f11e558279dac815d1da221
 
 include(deployment.pri)
 qtcAddDeployment()
