@@ -16,7 +16,10 @@ SOURCES += main.cpp \
     income.cpp \
     incomerecord.cpp \
     incomeinputscreen.cpp \
-    annualreport.cpp
+    annualreport.cpp \
+    expense.cpp \
+    expenseinputcsreen.cpp \
+    expenserecord.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
