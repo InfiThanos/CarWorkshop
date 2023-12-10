@@ -1,9 +1,9 @@
-#include <iostream>
-using namespace std;
+#include "userinterface.h"
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    UserInterface theUserInterface;
+    theUserInterface.interact();
     return 0;
 }
 

@@ -19,7 +19,9 @@ SOURCES += main.cpp \
     annualreport.cpp \
     expense.cpp \
     expenseinputcsreen.cpp \
-    expenserecord.cpp
+    expenserecord.cpp \
+    loginscreen.cpp \
+    userinterface.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
