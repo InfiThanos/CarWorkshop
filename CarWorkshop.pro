@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     workorder.cpp \
     income.cpp \
     incomerecord.cpp \
-    incomeinputscreen.cpp
+    incomeinputscreen.cpp \
+    annualreport.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
