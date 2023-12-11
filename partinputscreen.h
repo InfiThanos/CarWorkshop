@@ -6,13 +6,13 @@
 
 using namespace std;
 
-class PartInputScreen                       //класс, отвечающий за отображение ?экрана?
+class PartInputScreen                       //╨║╨╗╨░╤Б╤Б, ╨╛╤В╨▓╨╡╤З╨░╤О╤Й╨╕╨╣ ╨╖╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ?╤Н╨║╤А╨░╨╜╨░?
 {
 private:
-    PartList* ptrPartList;                  //указатель на список деталей
+    PartList* ptrPartList;                  //╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╤Б╨┐╨╕╤Б╨╛╨║ ╨┤╨╡╤В╨░╨╗╨╡╨╣
 public:
-    PartInputScreen(PartList* ptrPART);     //конструктор
-    void setPart();                         //добавить данные о детале
+    PartInputScreen(PartList* ptrPART);     //╨║╨╛╨╜╤Б╤В╤А╤Г╨║╤В╨╛╤А
+    void setPart();                         //╨┤╨╛╨▒╨░╨▓╨╕╤В╤М ╨┤╨░╨╜╨╜╤Л╨╡ ╨╛ ╨┤╨╡╤В╨░╨╗╨╡
 };
 
 #endif // PARTINPUTSCREEN

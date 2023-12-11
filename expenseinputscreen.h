@@ -3,13 +3,13 @@
 
 #include "expenserecord.h"
 
-class ExpenseInputScreen                        //ä´†·· §´Ô ¢¢Æ§† ‡†·ÂÆ§Æ¢
+class ExpenseInputScreen                        //–ö–ª–∞—Å—Å –¥–ª—è –≤–≤–æ–¥–∞ —Ä–∞—Å—Ö–æ–¥–æ–≤
 {
 private:
-    ExpenseRecord* ptrExpenseRecord;            // ß†Ø®·Ï Æ ‡†·ÂÆ§†Â
+    ExpenseRecord* ptrExpenseRecord;            // –∑–∞–ø–∏—Å—å –æ —Ä–∞—Å—Ö–æ–¥–∞—Ö
 public:
-    ExpenseInputScreen(ExpenseRecord* ptrEr);   // ™Æ≠·‚‡„™‚Æ‡
-    void setExpense();                          //§Æ°†¢®‚Ï §†≠≠Î• Æ ‡†·ÂÆ§•
+    ExpenseInputScreen(ExpenseRecord* ptrEr);   // –∫–æ–Ω—Å—Ç—Ä—É–∫—Ç–æ—Ä
+    void setExpense();                          //–¥–æ–±–∞–≤–∏—Ç—å –¥–∞–Ω–Ω—ã–µ –æ —Ä–∞—Å—Ö–æ–¥–µ
 };
 
 #endif // EXPENSEINPUTSCREEN

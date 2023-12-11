@@ -17,7 +17,7 @@ void IncomeInputScreen::setIncome()                                             
     unsigned __int32 p_amount,                      // величина транзакции
                      p_orderNumber;                 // номер заказа
     cin.sync();
-    cout << "Enter date (dd/mm/yyyy): " << endl;
+    cout << "Enter date (11/11/1111): " << endl;
     getline(cin, p_date);
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;

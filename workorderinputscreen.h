@@ -6,13 +6,13 @@
 
 using namespace std;
 
-class WorkOrderInputScreen                      //класс, отвечающий за отображение ?экрана?
+class WorkOrderInputScreen                      //╨║╨╗╨░╤Б╤Б, ╨╛╤В╨▓╨╡╤З╨░╤О╤Й╨╕╨╣ ╨╖╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ?╤Н╨║╤А╨░╨╜╨░?
 {
 private:
-    WorkOrderList* ptrWorkOrderList;            //указатель на список заказ-нарядов
+    WorkOrderList* ptrWorkOrderList;            //╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╤Б╨┐╨╕╤Б╨╛╨║ ╨╖╨░╨║╨░╨╖-╨╜╨░╤А╤П╨┤╨╛╨▓
 public:
-    WorkOrderInputScreen(WorkOrderList* ptrWO); //конструктор
-    void setWorkOrder();                        //добавить данные о заказ-наряде
+    WorkOrderInputScreen(WorkOrderList* ptrWO); //╨║╨╛╨╜╤Б╤В╤А╤Г╨║╤В╨╛╤А
+    void setWorkOrder();                        //╨┤╨╛╨▒╨░╨▓╨╕╤В╤М ╨┤╨░╨╜╨╜╤Л╨╡ ╨╛ ╨╖╨░╨║╨░╨╖-╨╜╨░╤А╤П╨┤╨╡
 };
 
 #endif // WORKORDERINPUTSCREEN

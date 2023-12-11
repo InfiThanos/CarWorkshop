@@ -16,7 +16,7 @@ void ExpenseInputScreen::setExpense()                                           
            p_typeOfPay;
     unsigned __int32 p_amount;
     cin.sync();
-    cout << "Enter date (17/10/2023): " << endl;
+    cout << "Enter date (11/11/1111): " << endl;
     getline(cin, p_date);
     cout << "Enter receiver's name (KCM-Komfort): " << endl;
     getline(cin, p_nameReceiver);
