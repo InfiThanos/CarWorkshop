@@ -6,13 +6,13 @@
 
 using namespace std;
 
-class ClientInputScreen                         //класс, отвечающий за отображение ?экрана?
+class ClientInputScreen                         //╨║╨╗╨░╤Б╤Б, ╨╛╤В╨▓╨╡╤З╨░╤О╤Й╨╕╨╣ ╨╖╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ?╤Н╨║╤А╨░╨╜╨░?
 {
 private:
-    ClientList* ptrClientList;                  //указатель на список клиентов
+    ClientList* ptrClientList;                  //╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╤Б╨┐╨╕╤Б╨╛╨║ ╨║╨╗╨╕╨╡╨╜╤В╨╛╨▓
 public:
-    ClientInputScreen(ClientList* ptrCL);       //конструктор
-    void setClient();                           //добавить данные о клиенте
+    ClientInputScreen(ClientList* ptrCL);       //╨║╨╛╨╜╤Б╤В╤А╤Г╨║╤В╨╛╤А
+    void setClient();                           //╨┤╨╛╨▒╨░╨▓╨╕╤В╤М ╨┤╨░╨╜╨╜╤Л╨╡ ╨╛ ╨║╨╗╨╕╨╡╨╜╤В╨╡
 };
 
 #endif // CLIENTINPUTSCREEN

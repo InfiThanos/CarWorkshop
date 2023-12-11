@@ -7,16 +7,16 @@
 
 using namespace std;
 
-class ExpenseRecord                         //Класс записей о затратах
+class ExpenseRecord                         //╨Ъ╨╗╨░╤Б╤Б ╨╖╨░╨┐╨╕╤Б╨╡╨╣ ╨╛ ╨╖╨░╤В╤А╨░╤В╨░╤Е
 {
 private:
-    vector<Expense*>vectPtrsExpense;        //вектор указателей на расходы
-    vector<Expense*>::iterator iter;        //итератор для вектора указателей
+    vector<Expense*>vectPtrsExpense;        //╨▓╨╡╨║╤В╨╛╤А ╤Г╨║╨░╨╖╨░╤В╨╡╨╗╨╡╨╣ ╨╜╨░ ╤А╨░╤Б╤Е╨╛╨┤╤Л
+    vector<Expense*>::iterator iter;        //╨╕╤В╨╡╤А╨░╤В╨╛╤А ╨┤╨╗╤П ╨▓╨╡╨║╤В╨╛╤А╨░ ╤Г╨║╨░╨╖╨░╤В╨╡╨╗╨╡╨╣
 public:
-    ~ExpenseRecord();                       //деструктор
-    void insertExp(Expense* ptrExp);        //добавляем затраты в вектор
-    void display();                         //распечатываем все расходы
-    float displaySummary();                 //используется при составлении годового отчета
+    ~ExpenseRecord();                       //╨┤╨╡╤Б╤В╤А╤Г╨║╤В╨╛╤А
+    void insertExp(Expense* ptrExp);        //╨┤╨╛╨▒╨░╨▓╨╗╤П╨╡╨╝ ╨╖╨░╤В╤А╨░╤В╤Л ╨▓ ╨▓╨╡╨║╤В╨╛╤А
+    void display();                         //╤А╨░╤Б╨┐╨╡╤З╨░╤В╤Л╨▓╨░╨╡╨╝ ╨▓╤Б╨╡ ╤А╨░╤Б╤Е╨╛╨┤╤Л
+    float displaySummary();                 //╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╤В╤Б╤П ╨┐╤А╨╕ ╤Б╨╛╤Б╤В╨░╨▓╨╗╨╡╨╜╨╕╨╕ ╨│╨╛╨┤╨╛╨▓╨╛╨│╨╛ ╨╛╤В╤З╨╡╤В╨░
 };
 
 #endif // EXPENSERECORD
