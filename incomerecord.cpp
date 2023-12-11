@@ -35,8 +35,8 @@ void IncomeRecord::display()                            // распечатыв�
         {                                               // распечатываем сумму доходов
             (*iter)->getInfoIncome(p_date, p_typeOfPay,
                                    p_amount, p_orderNumber);
-            cout << p_date << "\t " << p_orderNumber << "\t "
-                 << p_amount << "\t " << p_typeOfPay << endl;
+             cout << p_date << "\t " << p_orderNumber << "\t "
+                  << p_amount << "\t " << p_typeOfPay << endl;
              iter++;
         }
         cout << endl;
