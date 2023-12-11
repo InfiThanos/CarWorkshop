@@ -21,6 +21,7 @@ void IncomeInputScreen::setIncome()                                             
     getline(cin, p_date);
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;
+    cin.sync(); // сбрасываем остаток строки и продолжаем ввод на новой строке
     cout << "Enter the payment method (Debit/credit card, cash): " << endl;
     getline(cin, p_typeOfPay);
     cout << "Enter sum (8952): " << endl;
