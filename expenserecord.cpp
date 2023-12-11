@@ -20,8 +20,8 @@ void ExpenseRecord::insertExp(Expense* ptrExp)          //добавляем з�
 
 void ExpenseRecord::display()                           //распечатываем все расходы
 {
-    cout << "Date\t Reciever\t Amount\t Category\n"
-    << "----------------------------------------\n" << endl;
+    cout << "Date\t\t Reciever\t Amount\t Category\n"
+    << "--------------------------------------------------------------------\n" << endl;
     if (vectPtrsExpense.size() == 0)                   // В контейнере нет расходов
         cout << "***No expenses***\n" << endl;
     else

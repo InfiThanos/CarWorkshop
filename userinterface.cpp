@@ -38,8 +38,8 @@ void UserInterface::interact()
         {
             system("cls");
             cout << "Add a client - 'c', \n"
-                 << "Add income - 'd', \n"
-                 << "Add expense - 'r': \n";
+                 << "Add income - 'i', \n"
+                 << "Add expense - 'e': \n";
             cin >> choise;
             switch (choise)
             {
@@ -53,7 +53,7 @@ void UserInterface::interact()
                 system("cls");
                 break;
 
-                case 'd':
+                case 'i':
                 if (logIn == 2)
                 {
                     system("cls");
@@ -93,9 +93,9 @@ void UserInterface::interact()
         {
             system("cls");
             cout << "Output of clients - 'c', \n"
-                 << "Output of income - 'd' \n"
-                 << "Output of expense - 'r', \n"
-                 << "Annual report - 'g': \n";
+                 << "Output of income - 'i' \n"
+                 << "Output of expense - 'e', \n"
+                 << "Annual report - 'a': \n";
             cin >> choise;
             switch (choise)
             {
@@ -103,7 +103,7 @@ void UserInterface::interact()
                 ptrClientList->display();
                 break;
 
-                case 'd':
+                case 'i':
                 if (logIn == 2)
                 {
                     ptrIncomeRecord->display();
@@ -114,7 +114,7 @@ void UserInterface::interact()
                 }
                 break;
 
-                case 'r':
+                case 'e':
                 if (logIn == 2)
                 {
                     ptrExpenseRecord->display();
@@ -125,7 +125,7 @@ void UserInterface::interact()
                 }
                 break;
 
-                case 'g':
+                case 'a':
                 if (logIn == 2)
                 {
                     ptrAnnualReport =

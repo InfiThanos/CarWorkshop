@@ -20,8 +20,8 @@ void IncomeRecord::insertInc(Income* ptrInc)            // добавляем д
 
 void IncomeRecord::display()                            // распечатываем все доходы
 {
-    cout << "Date\t Order number\t Sum\t Payment method\n"
-    << "----------------------------------------\n" << endl;
+    cout << "Date\t\t Order number\t Sum\t Payment method\n"
+    << "--------------------------------------------------------------------\n" << endl;
     if (vectPtrsIncome.size() == 0)                     // в контейнере нет доходов
         cout << "***There is no income***\n" << endl;
     else
