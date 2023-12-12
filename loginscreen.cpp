@@ -7,6 +7,7 @@ using namespace std;
 char LoginScreen::dispLogSc()
 {
     unsigned __int16 password;
+    system("cls");
     cout << "Hello. Enter the password (*****)" << endl;
     cin >> password;
     switch (password)

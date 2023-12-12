@@ -26,127 +26,160 @@ UserInterface::~UserInterface()
 void UserInterface::interact()
 {
     char logIn = ptrLoginScreen->dispLogSc();
-    if (logIn == 0) return;
     while (true)
     {
-        char choise;
-        cout << "Data entry - 'i', \n"
-             << "Reporting output - 'o', \n"
-             << "Exit - 'q': \n";
-        cin >> choise;
-        if (choise == 'i') // ввод данных
+        if (logIn != 0)
         {
-            system("cls");
-            cout << "Add a client - 'c', \n"
-                 << "Add income - 'i', \n"
-                 << "Add expense - 'e': \n";
-            cin >> choise;
-            switch (choise)
+            while (logIn != 0)
             {
-                //экраны ввода существуют только во время их
-                //использования
-                case 'c': system("cls");
-                ptrClientInputScreen =
-                new ClientInputScreen(ptrClientList);
-                ptrClientInputScreen->setClient();
-                delete ptrClientInputScreen;
-                system("cls");
-                break;
-
-                case 'i':
-                if (logIn == 2)
+                char choise;
+                cout << "Data entry - 'i', \n"
+                     << "Reporting output - 'o', \n"
+                     << "Exit - 'q': \n";
+                cin >> choise;
+                if (choise == 'i') // ввод данных
                 {
                     system("cls");
-                    ptrIncomeInputScreen =
-                    new IncomeInputScreen(ptrIncomeRecord);
-                    ptrIncomeInputScreen->setIncome();
-                    delete ptrIncomeInputScreen;
+                    cout << "Add a client - 'c', \n"
+                         << "Add a part - 'p', \n"
+                         << "Add a work-order - 'w', \n"
+                         << "Add income - 'i', \n"
+                         << "Add expense - 'e': \n";
+                    cin >> choise;
+                    switch (choise)
+                    {
+                        //экраны ввода существуют только во время их
+                        //использования
+                        case 'c': system("cls");
+                        ptrClientInputScreen =
+                        new ClientInputScreen(ptrClientList);
+                        ptrClientInputScreen->setClient();
+                        delete ptrClientInputScreen;
+                        system("cls");
+                        break;
+
+                        case 'p': system("cls");
+                        ptrPartInputScreen =
+                        new PartInputScreen(ptrPartList);
+                        ptrPartInputScreen->setPart();
+                        delete ptrPartInputScreen;
+                        system("cls");
+                        break;
+
+                        case 'w': system("cls");
+                        ptrWorkOrderInputScreen =
+                        new WorkOrderInputScreen(ptrWorkOrderList);
+                        ptrWorkOrderInputScreen->setWorkOrder();
+                        delete ptrWorkOrderInputScreen;
+                        system("cls");
+                        break;
+
+                        case 'i': system("cls");
+                        ptrIncomeInputScreen =
+                        new IncomeInputScreen(ptrIncomeRecord);
+                        ptrIncomeInputScreen->setIncome();
+                        delete ptrIncomeInputScreen;
+                        system("cls");
+                        break;
+
+                        case 'e':
+                        if (logIn == 2)
+                        {
+                            system("cls");
+                            ptrExpenseInputScreen =
+                            new ExpenseInputScreen(ptrExpenseRecord);
+                            ptrExpenseInputScreen->setExpense();
+                            delete ptrExpenseInputScreen;
+                            system("cls");
+                        }
+                        else
+                        {
+                            cout << "The function is not available" << endl;
+                        }
+                        break;
+
+                        default: cout << "Unknown function\n";
+                        break;
+                    } // конец секции switch
+                } // конец условия if
+                else if (choise == 'o') // вывод данных
+                {
                     system("cls");
+                    cout << "Output of clients - 'c', \n"
+                         << "Output of parts - 'p', \n"
+                         << "Output of work-orders - 'w', \n"
+                         << "Output of income - 'i' \n"
+                         << "Output of expense - 'e', \n"
+                         << "Annual report - 'a': \n";
+                    cin >> choise;
+                    switch (choise)
+                    {
+                        case 'c':
+                        ptrClientList->display();
+                        break;
+
+                        case 'p':
+                        ptrPartList->display();
+                        break;
+
+                        case 'w':
+                        ptrWorkOrderList->display();
+                        break;
+
+                        case 'i':
+                        if (logIn == 2)
+                        {
+                            ptrIncomeRecord->display();
+                        }
+                        else
+                        {
+                            cout << "The function is not available" << endl;
+                        }
+                        break;
+
+                        case 'e':
+                        if (logIn == 2)
+                        {
+                            ptrExpenseRecord->display();
+                        }
+                        else
+                        {
+                            cout << "The function is not available" << endl;
+                        }
+                        break;
+
+                        case 'a':
+                        if (logIn == 2)
+                        {
+                            ptrAnnualReport =
+                            new AnnualReport(ptrIncomeRecord, ptrExpenseRecord);
+                            ptrAnnualReport->display();
+                            delete ptrAnnualReport;
+                        }
+                        else
+                        {
+                            cout << "The function is not available" << endl;
+                        }
+                        break;
+
+                        default: cout << "Unknown function\n";
+                        break;
+                    } // конец switch
+                } // конец elseif
+                else if (choise == 'q')
+                {
+                    logIn = 0;
                 }
                 else
                 {
-                    cout << "The function is not available" << endl;
+                    cout << "Unknown function\n";
                 }
-                break;
-
-                case 'e':
-                if (logIn == 2)
-                {
-                    system("cls");
-                    ptrExpenseInputScreen =
-                    new ExpenseInputScreen(ptrExpenseRecord);
-                    ptrExpenseInputScreen->setExpense();
-                    delete ptrExpenseInputScreen;
-                    system("cls");
-                }
-                else
-                {
-                    cout << "The function is not available" << endl;
-                }
-                break;
-
-                default: cout << "Unknown function\n";
-                break;
-            } // конец секции switch
-        } // конец условия if
-        else if (choise == 'o') // вывод данных
-        {
-            system("cls");
-            cout << "Output of clients - 'c', \n"
-                 << "Output of income - 'i' \n"
-                 << "Output of expense - 'e', \n"
-                 << "Annual report - 'a': \n";
-            cin >> choise;
-            switch (choise)
-            {
-                case 'c':
-                ptrClientList->display();
-                break;
-
-                case 'i':
-                if (logIn == 2)
-                {
-                    ptrIncomeRecord->display();
-                }
-                else
-                {
-                    cout << "The function is not available" << endl;
-                }
-                break;
-
-                case 'e':
-                if (logIn == 2)
-                {
-                    ptrExpenseRecord->display();
-                }
-                else
-                {
-                    cout << "The function is not available" << endl;
-                }
-                break;
-
-                case 'a':
-                if (logIn == 2)
-                {
-                    ptrAnnualReport =
-                    new AnnualReport(ptrIncomeRecord, ptrExpenseRecord);
-                    ptrAnnualReport->display();
-                    delete ptrAnnualReport;
-                }
-                else
-                {
-                    cout << "The function is not available" << endl;
-                }
-                break;
-
-                default: cout << "Unknown function\n";
-                break;
-            } // конец switch
-        } // конец elseif
-        else if (choise == 'q')
-            return; // выход
+            } //конец while(LogIn)
+        }
         else
-            cout << "Unknown function\n";
+        {
+            logIn = ptrLoginScreen->dispLogSc();
+        }
     } // конец while
 }
 

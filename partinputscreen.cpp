@@ -17,7 +17,7 @@ void PartInputScreen::setPart()                                                 
     cin.sync();
     cout << "Enter the part name (Remen policlinovii DAYCO): " << endl;
     getline(cin, p_partName);
-    cout << "Enter article (5K1750): " << endl;
+    cout << "Enter article (51750): " << endl;
     cin >> p_article;
     cout << "Enter availability in stock (17): " << endl;
     cin >> p_availability;
