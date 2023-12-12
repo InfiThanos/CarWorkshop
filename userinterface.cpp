@@ -38,6 +38,8 @@ void UserInterface::interact()
         {
             system("cls");
             cout << "Add a client - 'c', \n"
+                 << "Add a part - 'p', \n"
+                 << "Add a work-order - 'w', \n"
                  << "Add income - 'i', \n"
                  << "Add expense - 'e': \n";
             cin >> choise;
@@ -53,20 +55,28 @@ void UserInterface::interact()
                 system("cls");
                 break;
 
-                case 'i':
-                if (logIn == 2)
-                {
-                    system("cls");
-                    ptrIncomeInputScreen =
-                    new IncomeInputScreen(ptrIncomeRecord);
-                    ptrIncomeInputScreen->setIncome();
-                    delete ptrIncomeInputScreen;
-                    system("cls");
-                }
-                else
-                {
-                    cout << "The function is not available" << endl;
-                }
+                case 'p': system("cls");
+                ptrPartInputScreen =
+                new PartInputScreen(ptrPartList);
+                ptrPartInputScreen->setPart();
+                delete ptrPartInputScreen;
+                system("cls");
+                break;
+
+                case 'w': system("cls");
+                ptrWorkOrderInputScreen =
+                new WorkOrderInputScreen(ptrWorkOrderList);
+                ptrWorkOrderInputScreen->setWorkOrder();
+                delete ptrWorkOrderInputScreen;
+                system("cls");
+                break;
+
+                case 'i': system("cls");
+                ptrIncomeInputScreen =
+                new IncomeInputScreen(ptrIncomeRecord);
+                ptrIncomeInputScreen->setIncome();
+                delete ptrIncomeInputScreen;
+                system("cls");
                 break;
 
                 case 'e':
@@ -93,6 +103,8 @@ void UserInterface::interact()
         {
             system("cls");
             cout << "Output of clients - 'c', \n"
+                 << "Output of parts - 'p', \n"
+                 << "Output of work-orders - 'w', \n"
                  << "Output of income - 'i' \n"
                  << "Output of expense - 'e', \n"
                  << "Annual report - 'a': \n";
@@ -101,6 +113,14 @@ void UserInterface::interact()
             {
                 case 'c':
                 ptrClientList->display();
+                break;
+
+                case 'p':
+                ptrPartList->display();
+                break;
+
+                case 'w':
+                ptrWorkOrderList->display();
                 break;
 
                 case 'i':
