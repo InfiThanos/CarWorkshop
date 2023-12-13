@@ -203,7 +203,20 @@ void UserInterface::interact()
                 } // конец elseif
                 else if (choise == 'q')
                 {
-                    logIn = 0;
+                    system("cls");
+                    cout << "Exit the program - 'q', \n"
+                         << "Log out of your account - 'a', \n";
+                    cin >> choise;
+                    switch (choise)
+                    {
+                        case 'q':
+                        return;
+                        break;
+
+                        case 'a':
+                        logIn = 0;
+                        break;
+                    }
                 }
                 else
                 {
@@ -213,6 +226,7 @@ void UserInterface::interact()
         }
         else
         {
+            Sleep(500);
             logIn = ptrLoginScreen->dispLogSc();
         }
     } // конец while

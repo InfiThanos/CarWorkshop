@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "client.h"
 
 using namespace std;
@@ -30,4 +31,42 @@ void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carB
     p_regPlate = regPlate;
     p_yearOfManufacture = yearOfManufacture;
     p_carMileage = carMileage;
+}
+
+void Client::edit()
+{
+    cout << "If the field does not need to be edited, press Enter" <<endl;
+    string p_name, p_phoneNumber, p_carBrand, p_carModel,
+           p_VIN, p_regPlate, p_yearOfManufacture, p_carMileage;
+    cout << "Old name: " << name << " New: ";
+    cin >> p_name;
+    if (p_name != "\n") name = p_name;
+
+    cout << "Old phone number: " << phoneNumber << " New: ";
+    cin >> p_phoneNumber;
+    if (p_phoneNumber != "\n") phoneNumber = p_phoneNumber;
+
+    cout << "Old car brand: " << carBrand << " New: ";
+        cin >> p_carBrand;
+        if (p_carBrand != "\n") carBrand = p_carBrand;
+
+    cout << "Old car model: " << carModel << " New: ";
+        cin >> p_carModel;
+        if (p_carModel != "\n") carModel = p_carModel;
+
+    cout << "Old VIN: " << VIN << " New: ";
+        cin >> p_VIN;
+        if (p_VIN != "\n") VIN = p_VIN;
+
+    cout << "Old reg plate: " << regPlate << " New: ";
+        cin >> p_regPlate;
+        if (p_regPlate != "\n") regPlate = p_regPlate;
+
+    cout << "Old year of manufacture: " << yearOfManufacture << " New: ";
+            cin >> p_yearOfManufacture;
+            if (p_yearOfManufacture != "\n") yearOfManufacture = atoll(p_yearOfManufacture.c_str());
+
+    cout << "Old car mileage: " << carMileage << " New: ";
+            cin >> p_carMileage;
+            if (p_carMileage != "\n") carMileage = atoll(p_carMileage.c_str());
 }

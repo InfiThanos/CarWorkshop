@@ -2,6 +2,7 @@
 #include "clientlist.h"
 #include <string>
 #include <list>
+#include <iterator>
 
 using namespace std;
 
@@ -49,8 +50,25 @@ void ClientList::display()                      // вывод списка кл�
                  << "\t The year of manufacture of the car: " << p_yearOfManufacture
                  << " Mileage: " << p_carMileage << endl;
 
-            cout << "-----------------------------------------------" << endl;
-            *iter++;
+            cout << "-----------------------------------------------------" << endl;
+            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
+            char choise;
+            cin >> choise;
+            if (choise == '1')
+            {
+                delete *iter;
+                iter = setPtrsClients.erase(iter);
+            }
+            else if (choise == '2')
+            {
+                (*iter)->edit();
+                ++iter;
+            }
+            else
+            {
+                ++iter;
+            }
+            cout << "-----------------------------------------------------" << endl;
         }
     }
 }
