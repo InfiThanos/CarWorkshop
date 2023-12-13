@@ -8,7 +8,7 @@ char LoginScreen::dispLogSc()
 {
     unsigned __int16 password;
     system("cls");
-    cout << "Hello. Enter the password (*****)" << endl;
+    cout << "Hello! Enter the password (*****)" << endl;
     cin >> password;
     switch (password)
     {
@@ -21,7 +21,7 @@ char LoginScreen::dispLogSc()
         return 1;
         break;
     default:
-        cout << "Parol neveren" << endl;
+        cout << "Wrong password" << endl;
         return 0;
         break;
     }
