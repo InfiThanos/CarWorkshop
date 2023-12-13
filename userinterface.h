@@ -32,6 +32,7 @@ private:
 public:
     UserInterface();
     ~UserInterface();
+    void logoScreen();
     void interact();
 };
 
