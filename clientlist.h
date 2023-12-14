@@ -2,7 +2,6 @@
 #define CLIENTLIST
 
 #include "client.h"
-#include <string>
 #include <list>
 
 using namespace std;

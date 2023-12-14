@@ -33,7 +33,7 @@ void ClientList::display()                      // вывод списка кл�
         string p_name, p_phoneNumber,
                p_carBrand, p_carModel,
                p_VIN, p_regPlate;
-        unsigned __int32 p_yearOfManufacture, p_carMileage;
+        float  p_yearOfManufacture, p_carMileage;
 
         iter = setPtrsClients.begin();
 
