@@ -15,7 +15,7 @@ void WorkOrderInputScreen::setWorkOrder()                                       
     string p_name, p_orderInfo,
            p_carBrand, p_carModel,
            p_status;
-    unsigned __int32 p_orderNumber, p_price;
+    float  p_orderNumber, p_price;
     cin.sync();
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;

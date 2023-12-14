@@ -9,15 +9,15 @@ class Part                              //класс для хранения и�
 {
 private:
     string partName;                    //название детали
-    unsigned __int32 article,           //артикул, соот-щий № детали в каталоге запчастей производителя
-                     availability,      //наличие на складе автомастерской
-                     price;             //стоимость детали для покупки у автомастерской
+    float article,                      //артикул, соот-щий № детали в каталоге запчастей производителя
+          availability,                 //наличие на складе автомастерской
+          price;                        //стоимость детали для покупки у автомастерской
 public:
-    Part(string p_partName, unsigned __int32 p_article,                                 //конструктор
-         unsigned __int32 p_availability, unsigned __int32 p_price);
+    Part(string p_partName, float p_article,                                        //конструктор
+         float p_availability, float p_price);
 
-    void getInfoPart(string& p_partName, unsigned __int32& p_article,               //метод для возврата
-                       unsigned __int32& p_availability, unsigned __int32& p_price);//значения полей
+    void getInfoPart(string& p_partName, float& p_article,                          //метод для возврата
+                       float& p_availability, float& p_price);                      //значения полей
 };
 
 #endif // PART

@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "clientinputscreen.h"
 #include <string>
@@ -16,7 +15,7 @@ void ClientInputScreen::setClient()                                             
     string p_name, p_phoneNumber,
            p_carBrand, p_carModel,
            p_VIN, p_regPlate;
-    unsigned __int32 p_yearOfManufacture, p_carMileage;
+    float  p_yearOfManufacture, p_carMileage;
     cin.sync();
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);

@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Expense::Expense(string p_date, string p_nameReceiver,                           //конструктор
-        string p_typeOfPay, unsigned __int32 p_amount)
+Expense::Expense(string p_date, string p_nameReceiver,                          //конструктор
+        string p_typeOfPay, float p_amount)
 {
     date = p_date;
     nameReceiver = p_nameReceiver;
@@ -12,18 +12,18 @@ Expense::Expense(string p_date, string p_nameReceiver,                          
     amount = p_amount;
 }
 
-unsigned __int32 Expense::getAmount()                                            //метод для возврата суммы расхода
+float Expense::getAmount()                                                      //метод для возврата суммы расхода
 {
     return amount;
 }
 
-string Expense::getTypeOfPay()                                                   //метод для возврата категории расхода
+string Expense::getTypeOfPay()                                                  //метод для возврата категории расхода
 {
     return typeOfPay;
 }
 
-void Expense::getInfoExpense(string& p_date, string& p_nameReceiver,             //метод для возврата
-                    string& p_typeOfPay, unsigned __int32& p_amount)             //значения полей
+void Expense::getInfoExpense(string& p_date, string& p_nameReceiver,            //метод для возврата
+                    string& p_typeOfPay, float& p_amount)                       //значения полей
 {
     p_date = date;
     p_nameReceiver = nameReceiver;

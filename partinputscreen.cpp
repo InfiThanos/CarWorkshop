@@ -13,7 +13,7 @@ PartInputScreen::PartInputScreen(PartList* ptrPART):ptrPartList(ptrPART)        
 void PartInputScreen::setPart()                                                 //добавить данные о детале
 {
     string p_partName;
-    unsigned __int32 p_article, p_availability, p_price;
+    float p_article, p_availability, p_price;
     cin.sync();
     cout << "Enter the part name (Remen policlinovii DAYCO): " << endl;
     getline(cin, p_partName);

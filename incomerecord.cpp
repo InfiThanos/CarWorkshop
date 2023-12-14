@@ -1,5 +1,6 @@
 #include "incomerecord.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,8 +21,10 @@ void IncomeRecord::insertInc(Income* ptrInc)            // добавляем д
 
 void IncomeRecord::display()                            // распечатываем все доходы
 {
-    cout << "Date\t\t Order number\t Sum\t Payment method\n"
-    << "--------------------------------------------------------------------\n" << endl;
+    system("cls");
+    cout << setw(15) << "Date|" << setw(20) << "Order number|"
+         << setw(15) << "Sum|" << setw(20) << "Payment method\n"
+    << "---------------------------------------------------------------------" << endl;
     if (vectPtrsIncome.size() == 0)                     // в контейнере нет доходов
         cout << "***There is no income***\n" << endl;
     else
@@ -29,14 +32,14 @@ void IncomeRecord::display()                            // распечатыв�
         iter = vectPtrsIncome.begin();
         string p_date,                                  // дата уплаты доходов
                p_typeOfPay;                             // указывается способ оплаты
-        unsigned __int32 p_amount,                      // величина транзакции
-                         p_orderNumber;                 // номер заказа
+        float  p_amount,                                // величина транзакции
+               p_orderNumber;                           // номер заказа
         while (iter != vectPtrsIncome.end())
         {                                               // распечатываем сумму доходов
             (*iter)->getInfoIncome(p_date, p_typeOfPay,
                                    p_amount, p_orderNumber);
-             cout << p_date << "\t " << p_orderNumber << "\t\t "
-                  << p_amount << "\t " << p_typeOfPay << endl;
+             cout << setw(14) << p_date << "|" << setw(19) << p_orderNumber << "|"
+                  << setw(14) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
              iter++;
         }
         cout << endl;

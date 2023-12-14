@@ -32,7 +32,7 @@ void WorkOrderList::display()                   // вывод списка за�
         string p_name, p_orderInfo,
                p_carBrand, p_carModel,
                p_status;
-        unsigned __int32 p_orderNumber, p_price;
+        float  p_orderNumber, p_price;
 
         iter = setPtrsWorkOrders.begin();
 

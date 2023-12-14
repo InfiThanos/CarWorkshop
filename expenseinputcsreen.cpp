@@ -14,7 +14,7 @@ void ExpenseInputScreen::setExpense()                                           
     string p_date,
            p_nameReceiver,
            p_typeOfPay;
-    unsigned __int32 p_amount;
+    float  p_amount;
     cin.sync();
     cout << "Enter date (11/11/1111): " << endl;
     getline(cin, p_date);

@@ -30,7 +30,7 @@ void PartList::display()                      // вывод списка дет�
     else
     {
         string p_partName;
-        unsigned __int32 p_article, p_availability, p_price;
+        float  p_article, p_availability, p_price;
 
         iter = setPtrsParts.begin();
 
