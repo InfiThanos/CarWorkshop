@@ -16,7 +16,9 @@ void ClientInputScreen::setClient()                                             
     string p_name, p_phoneNumber,
            p_carBrand, p_carModel,
            p_VIN, p_regPlate;
-    uint16_t p_yearOfManufacture, p_carMileage;
+    uint16_t p_yearOfManufacture;
+	float p_carMileage;
+
     cin.sync();
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);

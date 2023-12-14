@@ -18,6 +18,7 @@ WorkOrder::WorkOrder( uint16_t p_orderNumber, string p_name,            //кон
     price = p_price;
     status = p_status;
 }
+
 void WorkOrder::getInfoWorkOrder(uint16_t& p_orderNumber,              //метод для возврата
                                  string& p_name, string& p_carBrand,           //значения полей
                                  string& p_carModel, string& p_orderInfo,

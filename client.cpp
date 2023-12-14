@@ -8,7 +8,8 @@ using namespace std;
 Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          // конструктор
                string p_carModel, string p_VIN, string p_regPlate,
                uint16_t p_yearOfManufacture,
-               uint16_t p_carMileage)
+               float p_carMileage)
+
 {
     name = p_name;
     phoneNumber = p_phoneNumber;
@@ -19,10 +20,11 @@ Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          
     yearOfManufacture = p_yearOfManufacture;
     carMileage = p_carMileage;
 }
+
 void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carBrand, // метод для возврата
                            string& p_carModel, string& p_VIN, string& p_regPlate,     // значения полей
                            uint16_t& p_yearOfManufacture,
-                           uint16_t& p_carMileage)
+                           float& p_carMileage)
 {
     p_name = name;
     p_phoneNumber = phoneNumber;

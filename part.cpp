@@ -14,6 +14,7 @@ Part::Part(string p_partName, uint16_t p_article,                             //
     availability = p_availability;
     price = p_price;
 }
+
 void Part::getInfoPart(string& p_partName, uint16_t& p_article,      //метод для возврата
                            uint16_t& p_availability, float& p_price) //значения полей
 {
