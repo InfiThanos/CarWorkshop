@@ -58,8 +58,6 @@ void UserInterface::logoScreen()
 
 void UserInterface::interact()
 {
-    UserInterface logo;
-    logo.logoScreen();
     char logIn = ptrLoginScreen->dispLogSc();
     while (true)
     {
@@ -85,7 +83,7 @@ void UserInterface::interact()
                     {
                         //экраны ввода существуют только во время их
                         //использования
-                        case 'c': system("cls");
+                        case 'c':
                         ptrClientInputScreen =
                         new ClientInputScreen(ptrClientList);
                         ptrClientInputScreen->setClient();
@@ -93,7 +91,7 @@ void UserInterface::interact()
                         system("cls");
                         break;
 
-                        case 'p': system("cls");
+                        case 'p':
                         ptrPartInputScreen =
                         new PartInputScreen(ptrPartList);
                         ptrPartInputScreen->setPart();
@@ -101,7 +99,7 @@ void UserInterface::interact()
                         system("cls");
                         break;
 
-                        case 'w': system("cls");
+                        case 'w':
                         ptrWorkOrderInputScreen =
                         new WorkOrderInputScreen(ptrWorkOrderList);
                         ptrWorkOrderInputScreen->setWorkOrder();
@@ -109,7 +107,7 @@ void UserInterface::interact()
                         system("cls");
                         break;
 
-                        case 'i': system("cls");
+                        case 'i':
                         ptrIncomeInputScreen =
                         new IncomeInputScreen(ptrIncomeRecord);
                         ptrIncomeInputScreen->setIncome();
@@ -120,7 +118,6 @@ void UserInterface::interact()
                         case 'e':
                         if (logIn == 2)
                         {
-                            system("cls");
                             ptrExpenseInputScreen =
                             new ExpenseInputScreen(ptrExpenseRecord);
                             ptrExpenseInputScreen->setExpense();
@@ -129,7 +126,7 @@ void UserInterface::interact()
                         }
                         else
                         {
-                            cout << "The function is not available" << endl;
+                            cout << "Access denied" << endl;
                         }
                         break;
 
@@ -168,7 +165,7 @@ void UserInterface::interact()
                         }
                         else
                         {
-                            cout << "The function is not available" << endl;
+                            cout << "Access denied" << endl;
                         }
                         break;
 
@@ -179,7 +176,7 @@ void UserInterface::interact()
                         }
                         else
                         {
-                            cout << "The function is not available" << endl;
+                            cout << "Access denied" << endl;
                         }
                         break;
 
@@ -193,7 +190,7 @@ void UserInterface::interact()
                         }
                         else
                         {
-                            cout << "The function is not available" << endl;
+                            cout << "Access denied" << endl;
                         }
                         break;
 

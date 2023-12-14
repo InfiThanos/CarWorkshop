@@ -24,6 +24,7 @@ void PartList::insertPart(Part* ptrP)
 
 void PartList::display()                      // вывод списка деталей
 {
+    system("cls");
     if (setPtrsParts.empty())                  // если список пуст
     {
         cout << "***No details***\n" << endl;  // выводим запись, что он пуст
@@ -31,7 +32,7 @@ void PartList::display()                      // вывод списка дет�
     else
     {
         string p_partName;
-        uint16_t p_article, p_availability;
+        uint32_t p_article, p_availability;
         float p_price;
 
         iter = setPtrsParts.begin();
@@ -45,7 +46,7 @@ void PartList::display()                      // вывод списка дет�
                  << "\t Quantity in stock: " << p_availability <<endl
                  << "\t Price: " << p_price << endl;
 
-            cout << "-----------------------------------------------" << endl;
+            cout << "-----------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;

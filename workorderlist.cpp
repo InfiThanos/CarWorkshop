@@ -24,6 +24,7 @@ void WorkOrderList::insertWorkOrder(WorkOrder* ptrW)
 
 void WorkOrderList::display()                   // вывод списка заказ-нарядов
 {
+    system("cls");
     if (setPtrsWorkOrders.empty())              // если список пуст
     {
         cout << "***No orders***\n" << endl;  // выводим запись, что он пуст
@@ -33,7 +34,7 @@ void WorkOrderList::display()                   // вывод списка за�
         string p_name, p_orderInfo,
                p_carBrand, p_carModel,
                p_status;
-        uint16_t p_orderNumber;
+        uint32_t p_orderNumber;
         float p_price;
 
         iter = setPtrsWorkOrders.begin();

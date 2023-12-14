@@ -48,6 +48,8 @@ void ExpenseRecord::display()                           //распечатыва
 
 float ExpenseRecord::displaySummary()                   //используется при составлении годового отчета
 {
+    system("cls");
+
     float totalExpenses = 0;                            // Сумма по всем категориям расходов
 
     if (vectPtrsExpense.size() == 0)

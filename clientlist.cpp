@@ -7,10 +7,10 @@
 
 using namespace std;
 
-ClientList::~ClientList()                       // деструктор - удаление клиентов
+ClientList::~ClientList()                           // деструктор - удаление клиентов
 {
     while (!setPtrsClients.empty())
-    {                                           // удаление указателей из контейнера
+    {                                               // удаление указателей из контейнера
         iter = setPtrsClients.begin();
         delete *iter;
         setPtrsClients.erase(iter);
@@ -20,21 +20,22 @@ ClientList::~ClientList()                       // деструктор - уда
 
 void ClientList::insertClient(Client* ptrC)
 {
-    setPtrsClients.push_back(ptrC);             // вставка нового клиента в список
+    setPtrsClients.push_back(ptrC);                 // вставка нового клиента в список
 }
 
-void ClientList::display()                      // вывод списка клиентов
+void ClientList::display()                          // вывод списка клиентов
 {
-    if (setPtrsClients.empty())                  // если список пуст
+    system("cls");
+    if (setPtrsClients.empty())                     // если список пуст
     {
-        cout << "***No clients***\n" << endl;  // выводим запись, что он пуст
+        cout << "***No clients***\n" << endl;       // выводим запись, что он пуст
     }
     else
     {
         string p_name, p_phoneNumber,
                p_carBrand, p_carModel,
                p_VIN, p_regPlate;
-        uint16_t p_yearOfManufacture;
+        uint32_t p_yearOfManufacture;
 		float p_carMileage;
 
         iter = setPtrsClients.begin();
