@@ -22,6 +22,7 @@ public:
 
     void getInfoExpense(string& p_date, string& p_nameReceiver,             //метод для возврата
                         string& p_typeOfPay, float& p_amount);              //значения полей
+    void edit();        // редактирование
 };
 
 #endif // EXPENSE
