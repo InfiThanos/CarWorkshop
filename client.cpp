@@ -1,13 +1,14 @@
 #include <iostream>
 #include <cstdlib>
+#include <stdint.h>
 #include "client.h"
 
 using namespace std;
 
-Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          //конструктор
+Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          // конструктор
                string p_carModel, string p_VIN, string p_regPlate,
-               unsigned __int32 p_yearOfManufacture,
-               unsigned __int32 p_carMileage)
+               uint16_t p_yearOfManufacture,
+               uint16_t p_carMileage)
 {
     name = p_name;
     phoneNumber = p_phoneNumber;
@@ -18,10 +19,10 @@ Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          
     yearOfManufacture = p_yearOfManufacture;
     carMileage = p_carMileage;
 }
-void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carBrand, //метод для возврата
-                           string& p_carModel, string& p_VIN, string& p_regPlate,     //значения полей
-                           unsigned __int32& p_yearOfManufacture,
-                           unsigned __int32& p_carMileage)
+void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carBrand, // метод для возврата
+                           string& p_carModel, string& p_VIN, string& p_regPlate,     // значения полей
+                           uint16_t& p_yearOfManufacture,
+                           uint16_t& p_carMileage)
 {
     p_name = name;
     p_phoneNumber = phoneNumber;
@@ -33,7 +34,7 @@ void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carB
     p_carMileage = carMileage;
 }
 
-void Client::edit()
+void Client::edit() // метод для редактирования
 {
     cout << "If the field does not need to be edited, press Enter" <<endl;
     string p_name, p_phoneNumber, p_carBrand, p_carModel,

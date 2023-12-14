@@ -1,5 +1,6 @@
 #include <iostream>
 #include "workorderlist.h"
+#include <stdint.h>
 #include <string>
 #include <list>
 
@@ -25,14 +26,15 @@ void WorkOrderList::display()                   // вывод списка за�
 {
     if (setPtrsWorkOrders.empty())              // если список пуст
     {
-        cout << "***Net zakazov***\n" << endl;  // выводим запись, что он пуст
+        cout << "***No orders***\n" << endl;  // выводим запись, что он пуст
     }
     else
     {
         string p_name, p_orderInfo,
                p_carBrand, p_carModel,
                p_status;
-        unsigned __int32 p_orderNumber, p_price;
+        uint16_t p_orderNumber;
+        float p_price;
 
         iter = setPtrsWorkOrders.begin();
 
@@ -51,7 +53,24 @@ void WorkOrderList::display()                   // вывод списка за�
                  << " status: " << p_status << endl;
 
             cout << "-----------------------------------------------" << endl;
-            *iter++;
+            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
+            char choise;
+            cin >> choise;
+            if (choise == '1')
+            {
+                delete *iter;
+                iter = setPtrsWorkOrders.erase(iter);
+            }
+            else if (choise == '2')
+            {
+                (*iter)->edit();
+                ++iter;
+            }
+            else
+            {
+                ++iter;
+            }
+            cout << "-----------------------------------------------------" << endl;
         }
     }
 }
