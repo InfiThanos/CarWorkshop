@@ -38,12 +38,34 @@ void IncomeRecord::display()                            // распечатыв�
         {                                               // распечатываем сумму доходов
             (*iter)->getInfoIncome(p_date, p_typeOfPay,
                                    p_amount, p_orderNumber);
-             cout << setw(14) << p_date << "|" << setw(19) << p_orderNumber << "|"
-                  << setw(14) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
-             iter++;
+            cout << "Income date\n" <<endl
+                 << "\t" << p_date << endl << endl
+                 << "Information" <<endl << "\t Type of pay: " << p_typeOfPay
+                 << "\t Amount: " << p_amount <<endl
+                 << "\t Order number: " << p_orderNumber << endl;
+
+            cout << "-----------------------------------------------" << endl;
+            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
+            char choise;
+            cin >> choise;
+            if (choise == '1')
+            {
+                delete *iter;
+                iter = vectPtrsIncome.erase(iter);
+            }
+            else if (choise == '2')
+            {
+                (*iter)->edit();
+                ++iter;
+            }
+            else
+            {
+                ++iter;
+            }
+            cout << "-----------------------------------------------------" << endl;
         }
+     }
         cout << endl;
-    }
 }
 
 float IncomeRecord::displaySummary()                   // используется при составлении годового отчета

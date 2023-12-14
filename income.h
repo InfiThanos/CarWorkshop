@@ -20,6 +20,7 @@ public:
 
     void getInfoIncome(string& p_date, string& p_typeOfPay,                             //метод для возврата
                         float& p_amount, float& p_orderNumber);                         //значения полей
+    void edit();        // редактирование
 };
 
 #endif // INCOME
