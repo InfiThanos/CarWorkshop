@@ -10,6 +10,7 @@ AnnualReport::AnnualReport(IncomeRecord* ptrIR, ExpenseRecord* ptrER) : ptrIR(pt
 
 void AnnualReport::display()
 {
+    system("cls");
     float incomes, expenses;
     cout << "Annual report\n--------------\n" << endl;
     cout << "Income\n" << endl;

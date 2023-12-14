@@ -23,6 +23,7 @@ void WorkOrderInputScreen::setWorkOrder()                                       
     cin.sync();
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;
+    cin.sync();
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);
     cout << "Vvedite marky auto (Lada): " << endl;

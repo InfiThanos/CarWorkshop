@@ -39,6 +39,7 @@ void WorkOrder::edit()
     cout << "If the field does not need to be edited, press Enter" << endl;
     string p_orderNumber, p_name, p_carBrand, p_carModel, p_orderInfo, p_price, p_status;
 
+    cin.sync();
     cout << "Old order number: " << orderNumber << " New: ";
     getline(cin, p_orderNumber);
     if (p_orderNumber != "") orderNumber = atoll(p_orderNumber.c_str());

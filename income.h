@@ -2,6 +2,7 @@
 #define INCOME
 
 #include <string>
+#include <stdint.h>
 
 using namespace std;
 
@@ -14,12 +15,12 @@ private:
           orderNumber;                                      //номер заказа
 public:
     Income(string p_date, string p_typeOfPay, float p_amount,                           //конструктор
-           float p_orderNumber);
+           uint32_t p_orderNumber);
 
     float getAmount();                                                                  //метод для возврата суммы дохода
 
     void getInfoIncome(string& p_date, string& p_typeOfPay,                             //метод для возврата
-                        float& p_amount, float& p_orderNumber);                         //значения полей
+                        float& p_amount, uint32_t& p_orderNumber);                      //значения полей
     void edit();        // редактирование
 };
 
