@@ -41,7 +41,7 @@ void ExpenseRecord::display()                           //распечатыва
             cout << setw(14) << p_date << "|" << setw(19) << p_nameReceiver << "|"
                  << setw(19) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
 
-            cout << "-----------------------------------------------------" << endl;
+            cout << "--------------------------------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;

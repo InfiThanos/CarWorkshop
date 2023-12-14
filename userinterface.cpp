@@ -127,6 +127,8 @@ void UserInterface::interact()
                         else
                         {
                             cout << "Access denied" << endl;
+                            Sleep(500);
+                            system("cls");
                         }
                         break;
 
@@ -166,6 +168,8 @@ void UserInterface::interact()
                         else
                         {
                             cout << "Access denied" << endl;
+                            Sleep(500);
+                            system("cls");
                         }
                         break;
 
@@ -177,6 +181,8 @@ void UserInterface::interact()
                         else
                         {
                             cout << "Access denied" << endl;
+                            Sleep(500);
+                            system("cls");
                         }
                         break;
 
@@ -191,10 +197,15 @@ void UserInterface::interact()
                         else
                         {
                             cout << "Access denied" << endl;
+                            Sleep(500);
+                            system("cls");
                         }
                         break;
 
-                        default: cout << "Unknown function\n";
+                        default:
+                        cout << "Unknown function\n";
+                        Sleep(500);
+                        system("cls");
                         break;
                     } // конец switch
                 } // конец elseif
@@ -218,6 +229,8 @@ void UserInterface::interact()
                 else
                 {
                     cout << "Unknown function\n";
+                    Sleep(500);
+                    system("cls");
                 }
             } //конец while(LogIn)
         }
