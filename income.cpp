@@ -1,10 +1,12 @@
 #include <iostream>
+#include <cstdlib>
+#include <stdint.h>
 #include "income.h"
 
 using namespace std;
 
 Income::Income(string p_date, string p_typeOfPay, float p_amount,                           //конструктор
-               float p_orderNumber)
+               uint32_t p_orderNumber)
 {
     date = p_date;
     typeOfPay = p_typeOfPay;
@@ -18,7 +20,7 @@ float Income::getAmount()                                                       
 }
 
 void Income::getInfoIncome(string& p_date, string& p_typeOfPay,                             //метод для возврата
-                           float& p_amount, float& p_orderNumber)                           //значения полей
+                           float& p_amount, uint32_t& p_orderNumber)                        //значения полей
 {
     p_date = date;
     p_typeOfPay = typeOfPay;
@@ -29,23 +31,23 @@ void Income::getInfoIncome(string& p_date, string& p_typeOfPay,                 
 void Income::edit() // метод для редактирования
 {
     cout << "If the field does not need to be edited, press Enter" <<endl;
-    string p_date, p_typeOfPay, float p_amount, p_orderNumber;
-    cout << "Old date: " << date << " New: ";
-    cin >> p_date;
-    if (p_date != "\n") date = p_date;
+    string p_date, p_typeOfPay,
+           p_amount, p_orderNumber;
 
-    cout << "Old reciever name: " << nameReceiver << " New: ";
-    cin >> p_nameReceiver;
+    cin.sync();
+    cout << "Old date: " << date << " New: ";
+    getline(cin, p_date);
+    if (p_date != "") date = p_date;
 
     cout << "Old type of pay: " << typeOfPay << " New: ";
-        cin >> p_typeOfPay;
-        if (p_typeOfPay != "\n") typeOfPay = p_typeOfPay;
+    getline(cin, p_typeOfPay);
+    if (p_typeOfPay != "") typeOfPay = p_typeOfPay;
 
     cout << "Old car amount: " << amount << " New: ";
-        cin >> p_amount;
-        if (p_amount != "\n") amount = atoll(p_amount.c_str());
+    getline(cin,  p_amount);
+    if (p_amount != "") amount = atof(p_amount.c_str());
 
     cout << "Old order number: " << orderNumber << " New: ";
-        cin >> p_orderNumber;
-        if (p_orderNumber != "\n") orderNumber = atoll(p_orderNumber.c_str());
+    getline(cin, p_orderNumber);
+    if (p_orderNumber != "") orderNumber = atoll(p_orderNumber.c_str());
 }

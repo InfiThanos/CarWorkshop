@@ -38,13 +38,10 @@ void ExpenseRecord::display()                           //распечатыва
         {                                               // распечатываем все расходы
             (*iter)->getInfoExpense(p_date, p_nameReceiver,
                                     p_typeOfPay, p_amount);
-            cout << "Date\n" <<endl
-                 << "\t" << p_date << endl << endl
-                 << "Information" <<endl << "\t Reciver's name: " << p_nameReceiver
-                 << "\t Type of pay: " << p_typeOfPay <<endl
-                 << "\t Amount: " << p_amount << endl;
+            cout << setw(14) << p_date << "|" << setw(19) << p_nameReceiver << "|"
+                 << setw(19) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
 
-            cout << "-----------------------------------------------" << endl;
+            cout << "-----------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;

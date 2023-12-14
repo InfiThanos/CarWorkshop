@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "expense.h"
 
 using namespace std;
@@ -34,20 +35,23 @@ void Expense::getInfoExpense(string& p_date, string& p_nameReceiver,            
 void Expense::edit() // метод для редактирования
 {
     cout << "If the field does not need to be edited, press Enter" <<endl;
-    string p_date, p_nameReceiver, p_typeOfPay, float p_amount;
+    string p_date, p_nameReceiver,
+           p_typeOfPay, p_amount;
+
+    cin.sync();
     cout << "Old date: " << date << " New: ";
-    cin >> p_date;
-    if (p_date != "\n") date = p_date;
+    getline(cin, p_date);
+    if (p_date != "") date = p_date;
 
     cout << "Old reciever name: " << nameReceiver << " New: ";
-    cin >> p_nameReceiver;
-    if (p_nameReceiver != "\n") nameReceiver = p_nameReceiver;
+    getline(cin, p_nameReceiver);
+    if (p_nameReceiver != "") nameReceiver = p_nameReceiver;
 
     cout << "Old type of pay: " << typeOfPay << " New: ";
-        cin >> p_typeOfPay;
-        if (p_typeOfPay != "\n") typeOfPay = p_typeOfPay;
+    getline(cin, p_typeOfPay);
+    if (p_typeOfPay != "") typeOfPay = p_typeOfPay;
 
     cout << "Old amount: " << amount << " New: ";
-        cin >> p_amount;
-        if (p_amount != "\n") amount = atoll(p_amount.c_str());
+    getline(cin, p_amount);
+    if (p_amount != "") amount = atof(p_amount.c_str());
 }

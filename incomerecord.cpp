@@ -30,21 +30,18 @@ void IncomeRecord::display()                            // распечатыв�
     else
     {
         iter = vectPtrsIncome.begin();
-        string p_date,                                  // дата уплаты доходов
-               p_typeOfPay;                             // указывается способ оплаты
-        float  p_amount,                                // величина транзакции
-               p_orderNumber;                           // номер заказа
+        string   p_date,                                // дата уплаты доходов
+                 p_typeOfPay;                           // указывается способ оплаты
+        float    p_amount;                              // величина транзакции
+        uint32_t p_orderNumber;                         // номер заказа
         while (iter != vectPtrsIncome.end())
         {                                               // распечатываем сумму доходов
             (*iter)->getInfoIncome(p_date, p_typeOfPay,
                                    p_amount, p_orderNumber);
-            cout << "Income date\n" <<endl
-                 << "\t" << p_date << endl << endl
-                 << "Information" <<endl << "\t Type of pay: " << p_typeOfPay
-                 << "\t Amount: " << p_amount <<endl
-                 << "\t Order number: " << p_orderNumber << endl;
+            cout << setw(14) << p_date << "|" << setw(19) << p_orderNumber << "|"
+                 << setw(14) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
 
-            cout << "-----------------------------------------------" << endl;
+            cout << "-----------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;

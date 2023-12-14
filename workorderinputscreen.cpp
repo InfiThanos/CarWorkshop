@@ -16,8 +16,10 @@ void WorkOrderInputScreen::setWorkOrder()                                       
     string p_name, p_orderInfo,
            p_carBrand, p_carModel,
            p_status;
-    uint16_t p_orderNumber;
+    uint32_t p_orderNumber;
     float p_price;
+
+    system("cls");
     cin.sync();
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;
@@ -25,10 +27,9 @@ void WorkOrderInputScreen::setWorkOrder()                                       
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);
     cout << "Vvedite marky auto (Lada): " << endl;
-    cin >> p_carBrand;
+    getline(cin, p_carBrand);
     cout << "Enter car model (Granta): " << endl;
-    cin >> p_carModel;
-    cin.sync();
+    getline(cin, p_carModel);
     cout << "Enter order info (Scheduled maintenance): " << endl;
     getline(cin, p_orderInfo);
     cout << "Enter price (932): " << endl;

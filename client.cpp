@@ -7,7 +7,7 @@ using namespace std;
 
 Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          // конструктор
                string p_carModel, string p_VIN, string p_regPlate,
-               uint16_t p_yearOfManufacture,
+               uint32_t p_yearOfManufacture,
                float p_carMileage)
 
 {
@@ -23,7 +23,7 @@ Client::Client(string p_name, string p_phoneNumber, string p_carBrand,          
 
 void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carBrand, // метод для возврата
                            string& p_carModel, string& p_VIN, string& p_regPlate,     // значения полей
-                           uint16_t& p_yearOfManufacture,
+                           uint32_t& p_yearOfManufacture,
                            float& p_carMileage)
 {
     p_name = name;
@@ -39,37 +39,38 @@ void Client::getInfoClient(string& p_name, string& p_phoneNumber, string& p_carB
 void Client::edit() // метод для редактирования
 {
     cout << "If the field does not need to be edited, press Enter" <<endl;
+    cin.sync();
     string p_name, p_phoneNumber, p_carBrand, p_carModel,
            p_VIN, p_regPlate, p_yearOfManufacture, p_carMileage;
     cout << "Old name: " << name << " New: ";
-    cin >> p_name;
-    if (p_name != "\n") name = p_name;
+    getline(cin, p_name);
+    if (p_name != "") name = p_name;
 
     cout << "Old phone number: " << phoneNumber << " New: ";
-    cin >> p_phoneNumber;
-    if (p_phoneNumber != "\n") phoneNumber = p_phoneNumber;
+    getline(cin, p_phoneNumber);
+    if (p_phoneNumber != "") phoneNumber = p_phoneNumber;
 
     cout << "Old car brand: " << carBrand << " New: ";
-        cin >> p_carBrand;
-        if (p_carBrand != "\n") carBrand = p_carBrand;
+    getline(cin, p_carBrand);
+    if (p_carBrand != "") carBrand = p_carBrand;
 
     cout << "Old car model: " << carModel << " New: ";
-        cin >> p_carModel;
-        if (p_carModel != "\n") carModel = p_carModel;
+    getline(cin, p_carModel);
+    if (p_carModel != "") carModel = p_carModel;
 
     cout << "Old VIN: " << VIN << " New: ";
-        cin >> p_VIN;
-        if (p_VIN != "\n") VIN = p_VIN;
+    getline(cin, p_VIN);
+    if (p_VIN != "") VIN = p_VIN;
 
     cout << "Old reg plate: " << regPlate << " New: ";
-        cin >> p_regPlate;
-        if (p_regPlate != "\n") regPlate = p_regPlate;
+    getline(cin, p_regPlate);
+    if (p_regPlate != "") regPlate = p_regPlate;
 
     cout << "Old year of manufacture: " << yearOfManufacture << " New: ";
-            cin >> p_yearOfManufacture;
-            if (p_yearOfManufacture != "\n") yearOfManufacture = atoll(p_yearOfManufacture.c_str());
+    getline(cin, p_yearOfManufacture);
+    if (p_yearOfManufacture != "") yearOfManufacture = atoll(p_yearOfManufacture.c_str());
 
     cout << "Old car mileage: " << carMileage << " New: ";
-            cin >> p_carMileage;
-            if (p_carMileage != "\n") carMileage = atoll(p_carMileage.c_str());
+    getline(cin, p_carMileage);
+    if (p_carMileage != "") carMileage = atof(p_carMileage.c_str());
 }

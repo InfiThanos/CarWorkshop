@@ -11,6 +11,8 @@ ExpenseInputScreen::ExpenseInputScreen(ExpenseRecord* ptrEr):ptrExpenseRecord(pt
 
 void ExpenseInputScreen::setExpense()                                               //добавить данные о расходе
 {
+    system("cls");
+
     string p_date,
            p_nameReceiver,
            p_typeOfPay;
