@@ -1,8 +1,9 @@
 #include <iostream>
-#include "clientlist.h"
 #include <string>
 #include <list>
 #include <iterator>
+#include <stdint.h>
+#include "clientlist.h"
 
 using namespace std;
 
@@ -33,7 +34,7 @@ void ClientList::display()                      // вывод списка кл�
         string p_name, p_phoneNumber,
                p_carBrand, p_carModel,
                p_VIN, p_regPlate;
-        unsigned __int32 p_yearOfManufacture, p_carMileage;
+        uint16_t p_yearOfManufacture, p_carMileage;
 
         iter = setPtrsClients.begin();
 

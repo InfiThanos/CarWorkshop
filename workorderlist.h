@@ -2,7 +2,6 @@
 #define WORKORDERLIST
 
 #include "workorder.h"
-#include <string>
 #include <list>
 
 using namespace std;

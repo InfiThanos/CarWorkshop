@@ -1,22 +1,22 @@
-
 #include <iostream>
-#include "clientinputscreen.h"
 #include <string>
 #include <list>
+#include <stdint.h>
+#include "clientinputscreen.h"
 
 using namespace std;
 
-ClientInputScreen::ClientInputScreen(ClientList* ptrCL):ptrClientList(ptrCL)   //конструктор
+ClientInputScreen::ClientInputScreen(ClientList* ptrCL):ptrClientList(ptrCL)    // конструктор
 {
 
 }
 
-void ClientInputScreen::setClient()                                             //добавить данные о клиенте
+void ClientInputScreen::setClient()                                             // добавить данные о клиенте
 {
     string p_name, p_phoneNumber,
            p_carBrand, p_carModel,
            p_VIN, p_regPlate;
-    unsigned __int32 p_yearOfManufacture, p_carMileage;
+    uint16_t p_yearOfManufacture, p_carMileage;
     cin.sync();
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);
