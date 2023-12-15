@@ -1,7 +1,8 @@
 #include <iostream>
-#include "partlist.h"
+#include <stdint.h>
 #include <string>
 #include <list>
+#include "partlist.h"
 
 using namespace std;
 
@@ -23,28 +24,47 @@ void PartList::insertPart(Part* ptrP)
 
 void PartList::display()                      // вывод списка деталей
 {
+    system("cls");
     if (setPtrsParts.empty())                  // если список пуст
     {
-        cout << "***Net detalei***\n" << endl;  // выводим запись, что он пуст
+        cout << "***No details***\n" << endl;  // выводим запись, что он пуст
     }
     else
     {
         string p_partName;
-        unsigned __int32 p_article, p_availability, p_price;
+        uint32_t p_article, p_availability;
+        float p_price;
 
         iter = setPtrsParts.begin();
 
         while (iter != setPtrsParts.end()) // распечатываем всех клиентов
         {
             (*iter)->getInfoPart(p_partName, p_article, p_availability, p_price);
-            cout << "Part name and article number\n" <<endl
-                 << "\t" << p_partName << "\t" << p_article << endl << endl
+            cout << "Part name\n" <<endl
+                 << "\t" << p_partName << endl << endl
                  << "Information" <<endl << "\t Article number: " << p_article
                  << "\t Quantity in stock: " << p_availability <<endl
                  << "\t Price: " << p_price << endl;
 
-            cout << "-----------------------------------------------" << endl;
-            *iter++;
+            cout << "--------------------------------------------------------------------" << endl;
+            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
+            char choise;
+            cin >> choise;
+            if (choise == '1')
+            {
+                delete *iter;
+                iter = setPtrsParts.erase(iter);
+            }
+            else if (choise == '2')
+            {
+                (*iter)->edit();
+                ++iter;
+            }
+            else
+            {
+                ++iter;
+            }
+            cout << "--------------------------------------------------------------------" << endl;
         }
     }
 }

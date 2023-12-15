@@ -2,7 +2,6 @@
 #define PARTLIST
 
 #include "part.h"
-#include <string>
 #include <list>
 
 using namespace std;

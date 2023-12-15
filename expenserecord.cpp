@@ -1,5 +1,6 @@
 #include "expenserecord.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,27 +21,48 @@ void ExpenseRecord::insertExp(Expense* ptrExp)          //добавляем з�
 
 void ExpenseRecord::display()                           //распечатываем все расходы
 {
-    cout << "Date\t\t Reciever\t Amount\t Category\n"
-    << "--------------------------------------------------------------------\n" << endl;
+    system("cls");
+    cout << setw(15) << "Date|" << setw(20) << "Reciever|"
+         << setw(20) << "Amount|" << setw(20) << "Category\n"
+    << "--------------------------------------------------------------------------" << endl;
     if (vectPtrsExpense.size() == 0)                   // В контейнере нет расходов
-        cout << "***No expenses***\n" << endl;
+        cout << "***There is no expenses***\n" << endl;
     else
     {
         iter = vectPtrsExpense.begin();
         string p_date,                                  //дата уплаты расходов
                p_nameReceiver,                          //получатель или название организации, которой перечисляются средства
                p_typeOfPay;                             //указывается с какой целью произведена транзакция (оплата ком. услуг, выплата кредита и др.)
-        unsigned __int32 p_amount;                      //величина транзакции
+        float p_amount;                                 //величина транзакции
         while (iter != vectPtrsExpense.end())
         {                                               // распечатываем все расходы
             (*iter)->getInfoExpense(p_date, p_nameReceiver,
                                     p_typeOfPay, p_amount);
-            cout << p_date << "\t " << p_nameReceiver << "\t "
-                 << p_amount << "\t " << p_typeOfPay << endl;
-             iter++;
+            cout << setw(14) << p_date << "|" << setw(19) << p_nameReceiver << "|"
+                 << setw(19) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
+
+            cout << "--------------------------------------------------------------------------" << endl;
+            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
+            char choise;
+            cin >> choise;
+            if (choise == '1')
+            {
+                delete *iter;
+                iter = vectPtrsExpense.erase(iter);
+            }
+            else if (choise == '2')
+            {
+                (*iter)->edit();
+                ++iter;
+            }
+            else
+            {
+                ++iter;
+            }
+            cout << "-----------------------------------------------------" << endl;
         }
+     }
         cout << endl;
-    }
 }
 
 float ExpenseRecord::displaySummary()                   //используется при составлении годового отчета

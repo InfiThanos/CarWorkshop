@@ -1,5 +1,6 @@
 #include <iostream>
 #include "workorderinputscreen.h"
+#include <stdint.h>
 #include <string>
 #include <list>
 
@@ -15,22 +16,27 @@ void WorkOrderInputScreen::setWorkOrder()                                       
     string p_name, p_orderInfo,
            p_carBrand, p_carModel,
            p_status;
-    unsigned __int32 p_orderNumber, p_price;
+    uint32_t p_orderNumber;
+    float p_price;
+
+    system("cls");
     cin.sync();
     cout << "Enter order number (123456): " << endl;
     cin >> p_orderNumber;
+    cin.sync();
     cout << "Enter client's name (Ivanov Ivan Ivanovich): " << endl;
     getline(cin, p_name);
     cout << "Vvedite marky auto (Lada): " << endl;
-    cin >> p_carBrand;
+    getline(cin, p_carBrand);
     cout << "Enter car model (Granta): " << endl;
-    cin >> p_carModel;
+    getline(cin, p_carModel);
     cout << "Enter order info (Scheduled maintenance): " << endl;
-    cin >> p_orderInfo;
+    getline(cin, p_orderInfo);
     cout << "Enter price (932): " << endl;
     cin >> p_price;
+    cin.sync();
     cout << "Enter order status (in process): " << endl;
-    cin >> p_status;
+    getline(cin, p_status);
 
     WorkOrder* ptrWorkOrder = new WorkOrder(p_orderNumber, p_name,
                                             p_carBrand, p_carModel,

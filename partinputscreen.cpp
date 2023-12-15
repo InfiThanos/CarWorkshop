@@ -1,23 +1,27 @@
 #include <iostream>
-#include "partinputscreen.h"
 #include <string>
 #include <list>
+#include <stdint.h>
+#include "partinputscreen.h"
 
 using namespace std;
 
-PartInputScreen::PartInputScreen(PartList* ptrPART):ptrPartList(ptrPART)        //конструктор
+PartInputScreen::PartInputScreen(PartList* ptrPART):ptrPartList(ptrPART)        // конструктор
 {
 
 }
 
-void PartInputScreen::setPart()                                                 //добавить данные о детале
+void PartInputScreen::setPart()                                                 // добавить данные о детале
 {
     string p_partName;
-    unsigned __int32 p_article, p_availability, p_price;
+    uint32_t p_article, p_availability;
+    float p_price;
+
+    system("cls");
     cin.sync();
-    cout << "Enter the part name (Remen policlinovii DAYCO): " << endl;
+    cout << "Enter the part name (Remen policlinoviy DAYCO): " << endl;
     getline(cin, p_partName);
-    cout << "Enter article (5K1750): " << endl;
+    cout << "Enter article (51750): " << endl;
     cin >> p_article;
     cout << "Enter availability in stock (17): " << endl;
     cin >> p_availability;

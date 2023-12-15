@@ -11,11 +11,14 @@ IncomeInputScreen::IncomeInputScreen(IncomeRecord* ptrIn):ptrIncomeRecord(ptrIn)
 
 void IncomeInputScreen::setIncome()                                                 // добавить данные о доходе
 {
+    system("cls");
+
     string p_date,                                  // дата уплаты доходов
            p_typeOfPay;                             // указывается с какой целью произведена транзакция
                                                     // (оплата ком. услуг, выплата кредита и др.)
-    unsigned __int32 p_amount,                      // величина транзакции
-                     p_orderNumber;                 // номер заказа
+    float  p_amount,                                // величина транзакции
+           p_orderNumber;                           // номер заказа
+
     cin.sync();
     cout << "Enter date (11/11/1111): " << endl;
     getline(cin, p_date);
@@ -28,6 +31,6 @@ void IncomeInputScreen::setIncome()                                             
     cin >> p_amount;
 
     Income* ptrIncome = new Income(p_date, p_typeOfPay,
-                                      p_amount, p_orderNumber);                     // создать доход
+                                   p_amount, p_orderNumber);                        // создать доход
     ptrIncomeRecord->insertInc(ptrIncome);                                          // занести в вектор
 }
