@@ -41,7 +41,7 @@ void IncomeRecord::display()                            // распечатыв�
             cout << setw(14) << p_date << "|" << setw(19) << p_orderNumber << "|"
                  << setw(14) << p_amount << "|" << setw(19) << p_typeOfPay << endl;
 
-            cout << "--------------------------------------------------------------------------" << endl;
+            cout << "---------------------------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;

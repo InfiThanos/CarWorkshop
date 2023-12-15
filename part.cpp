@@ -27,6 +27,7 @@ void Part::getInfoPart(string& p_partName, uint32_t& p_article,      //мето�
 void Part::edit()
 {
     cout << "If the field does not need to be edited, press Enter" <<endl;
+    cin.sync();
     string p_partName, p_article, p_availability, p_price;
     cout << "Old part name: " << partName << " New: ";
     getline(cin, p_partName);

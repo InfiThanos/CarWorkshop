@@ -53,7 +53,7 @@ void ClientList::display()                          // вывод списка �
                  << "\t The year of manufacture of the car: " << p_yearOfManufacture
                  << " Mileage: " << p_carMileage << endl;
 
-            cout << "-----------------------------------------------------" << endl;
+            cout << "--------------------------------------------------------------------" << endl;
             cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
             char choise;
             cin >> choise;
@@ -71,7 +71,7 @@ void ClientList::display()                          // вывод списка �
             {
                 ++iter;
             }
-            cout << "-----------------------------------------------------" << endl;
+            cout << "--------------------------------------------------------------------" << endl;
         }
     }
 }
