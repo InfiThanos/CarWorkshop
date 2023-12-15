@@ -213,7 +213,7 @@ void UserInterface::interact()
                 {
                     system("cls");
                     cout << "Exit the program - 'q', \n"
-                         << "Log out of your account - 'a', \n";
+                         << "Log out of your account - 'a': \n";
                     cin >> choise;
                     switch (choise)
                     {
